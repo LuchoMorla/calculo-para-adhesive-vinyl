@@ -4,18 +4,31 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculadora Adhesive vinyl</title>
+    <title>Adhesive vinyl Calculator</title>
 </head>
-<body>
-    <form for="inputAdhesiV">
-        <label for="inputAdhesiV">
-            Escribe la longitud y el ancho:
+<br>
+    <form action="" for="diseño">
+        <label for="diseño">
+            ¿ Do you like to include the desing of your product? click on the checkbox:
         </label>
-            <input type="number" value="Length" id="longitud">
-            <input type="number" value="Width" id="ancho">
-                <button type="button" onclick="calculoX()">Calcular</button>
-            <p>resultado de Y:</br>
-        <p  id="area"></p></p>
+        <input type="checkbox" id="wantDiseño" value="checkbox1"/>
+    </form>
+</br>
+    <br for="inputAdhesiV">
+        <label for="inputAdhesiV">
+            Write the length and the width please:
+        </label></Br>
+        <label for="longitud">
+           <p> Length: 
+            <input type="number" id="longitud"> Inches</p>
+        </label>
+        <label for="ancho">
+           <p> Width: 
+            <input type="number" id="ancho"> Inches</p>
+        </label>
+                <button type="button" onclick="calculoX()">Calculate</button> 
+        <p  id="area"></p>
+        <p id="suma"></p>
     </form>
     <script src="./calculadora.js"></script>
 </body>
