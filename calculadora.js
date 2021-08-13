@@ -75,7 +75,7 @@ function calculoX(){
     let calcularAdhesive = calcAdhesiV(areaPulgada, haveDesing);
 
     y = document.getElementById("area");
-    y.innerHTML = "The 'value:¿Cual era el resultado?' of your Adeshive Vinyl is: " + calcularAdhesive + " $ Dolares";
+    y.innerHTML = "The price in inches of your Adeshive Vinyl is: " + calcularAdhesive + " $ Dolares";
     
     var thePriceOfShipping =  theShippingPrice(areaPulgada);
 }
