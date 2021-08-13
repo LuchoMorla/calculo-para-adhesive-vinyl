@@ -58,7 +58,7 @@ let shipping10aDelante = 5;
 var precioPieAlCuadrado = 5;
 let pulgadaSobrePie = 12;
 
-var precioPulgadaAlCuadrado = precioPieAlCuadrado * pulgadaSobrePie;
+var precioPulgadaAlCuadrado = precioPieAlCuadrado / pulgadaSobrePie;
 
 function calculoX(){
     let l = document.getElementById("longitud");
