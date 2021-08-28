@@ -1,28 +1,22 @@
-// Se agregara el valor adicional por el diseño
+// crearmos el evento form para que escuche los cambios en el formulario
 
-function sumar(respuesta){
-    sum = document.getElementById('suma');
-    if(respuesta > 0){
-     sum.innerHTML = "Aditional value for the desing: " + respuesta + "dollars";
-    } else if(respuesta = 0) {
-     sum.innerHTML = "Aditional value for the desing: " + 0 + "dollars";
+sum = document.getElementById('suma');
+
+let checkbox = document.getElementById('wantDiseño');
+
+const form = document.getElementById('form');
+form.addEventListener('change', function() {
+
+    let costoDiseño = 0;
+
+    if (checkbox.checked){
+        costoDiseño = 35;
     }
- }
- 
+    // Se agregara el valor adicional por el diseño
+    sum.innerHTML = "Aditional value for the desing: " + costoDiseño + " dollars";
 
-// Validaremos el checkbox en el que le preguntamos al cliente si quiere incluir el diseño de su producto
-
-function validar() {
-    var checkbox = document.getElementById('wantDiseño');
-    checkbox.addEventListener('change', validar, false);
-    var checked = checkbox.checked;
-    if(checked){
-        respuesta = 35;
-    }else{
-        respuesta = 0;
-    }
-    sumar(respuesta);
-}
+    console.log('algo paso en el formulario');
+});
 
 // Interaccion con html dentro de la funcion que va a sacar el resultado del calculo, se cambiara la ecuacion por una que calcule el precio del area cuadrada más el shipping
 
@@ -40,20 +34,15 @@ function calculoX(){
     var length = l.value;
     var width = w.value;
 
-// creo que el haveDesing no deberia ir ahi ni tampoco más abajo
-
-    var haveDesing = validar();
-
     var lengthPulgadas = length;
     var widthPulgadas = width;
 
     let areaPulgada = lengthPulgadas * widthPulgadas;
-    let calcularAdhesive = calcAdhesiV(areaPulgada, haveDesing);
+    let calcularAdhesive = calcAdhesiV(areaPulgada);
 
     y = document.getElementById("area");
     y.innerHTML = "The price at inches of your Adeshive Vinyl is: " + calcularAdhesive + " $ Dollars/Inches^2";
 
-    var thePriceOfShipping =  theShippingPrice(areaPulgada);
 }
 
 //funcion para imprimir el valor en pies
