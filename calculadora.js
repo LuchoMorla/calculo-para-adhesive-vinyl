@@ -23,37 +23,11 @@ function validar() {
     }
     sumar(respuesta);
 }
-// funcion para imprimir el precio por
-
-
-// hare una funcion que calcule el precio del shipping segun la cantidad querida
-function theShippingPrice(areaPulgada) {
-    var shippingPrice = document.getElementById("precioShipping");
-
-    function elegirShipping(areaPulgada){
-    if ( areaPulgada => 1 && areaPulgada <= 3 ) {
-        return shippingUnoA3;
-    } else if ( areaPulgada => 4 && areaPulgada <= 6 ) {
-        return shipping4a6;
-    } else if ( areaPulgada => 7 && areaPulgada <= 9 ) {
-        return shipping7a9;
-    } else if ( areaPulgada < 9 ) {
-        return shipping10aDelante;
-    }
-}
-    var theShippingIs = elegirShipping(areaPulgada);
-    var imprimirShippingPrice = theShippingIs;
-    shippingPrice.innerHTML = "El precio del shipping por la cantidad de area pulgada necesitada es: " + imprimirShippingPrice + " Pulgada";
-} 
 
 // Interaccion con html dentro de la funcion que va a sacar el resultado del calculo, se cambiara la ecuacion por una que calcule el precio del area cuadrada más el shipping
 
 let pulgadasSobreCentimetro = 39e-2;
 // pulgadaSobreCentimetro fue creada para multiplicar por cm y sacar pulgadas, le saque  de la ecuacion por que el cliente pone las unidades en pulgadas, en teoria
-let shippingUnoA3 = 30;
-let shipping4a6 = 20;
-let shipping7a9 = 10;
-let shipping10aDelante = 5;
 
 var precioPieAlCuadrado = 5;
 let pulgadaSobrePie = 12;
