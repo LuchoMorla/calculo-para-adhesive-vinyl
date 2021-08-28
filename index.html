@@ -15,15 +15,20 @@
         <input type="checkbox" id="wantDiseño" value="checkbox1"/>
         <p id="suma"></p>
         <label for="inputAdhesiV">
-            Write the length and the width please:
+            Chose the unit to write the width and the length:
         </label></Br>
+        <input type="text" id="unit" list="units" />
+        <datalist id="units">
+            <option value="Inches">Inches</option>
+            <option value="Feets">Feets</option>o
+        </datalist>
         <label for="ancho">
             <p> Width: 
-             <input type="number" id="ancho"> Inches</p>
+             <input type="number" id="ancho"> <p id="unitIs"></p></p>
          </label>
         <label for="longitud">
            <p> Length: 
-            <input type="number" id="longitud"> Inches</p>
+            <input type="number" id="longitud"></p>
         </label>
                 <button type="button" onclick="calculoX()">Calculate in square inches</button>
                 <button type="button" onclick="imprimirEnPies()">calculate in square feet</button> 

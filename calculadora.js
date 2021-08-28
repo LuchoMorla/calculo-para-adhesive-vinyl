@@ -4,6 +4,8 @@ sum = document.getElementById('suma');
 
 let checkbox = document.getElementById('wantDiseño');
 
+let unidades = document.getElementById('unitIs');
+
 const form = document.getElementById('form');
 form.addEventListener('change', function() {
 
@@ -15,6 +17,9 @@ form.addEventListener('change', function() {
     // Se agregara el valor adicional por el diseño
     sum.innerHTML = "Aditional value for the desing: " + costoDiseño + " dollars";
 
+    let units = document.getElementById('unit');
+    let imprimeUnidad = units.value;
+    unidades.innerHTML = imprimeUnidad;
     console.log('algo paso en el formulario');
 });
 
@@ -34,6 +39,9 @@ function calculoX(){
     var length = l.value;
     var width = w.value;
 
+    let units = document.getElementById('unit');
+    let imprimeUnidad = units.value;
+
     var lengthPulgadas = length;
     var widthPulgadas = width;
 
@@ -41,7 +49,7 @@ function calculoX(){
     let calcularAdhesive = calcAdhesiV(areaPulgada);
 
     y = document.getElementById("area");
-    y.innerHTML = "The price at inches of your Adeshive Vinyl is: " + calcularAdhesive + " $ Dollars/Inches^2";
+    y.innerHTML = "The price at inches of your Adeshive Vinyl is: " + calcularAdhesive + " $ Dollars/" + imprimeUnidad + "^2";
 
 }
 
@@ -55,6 +63,9 @@ function imprimirEnPies(calcularAdhesive) {
 
     var lengthPulgadas = length;
     var widthPulgadas = width;
+
+    let units = document.getElementById('unit');
+    let imprimeUnidad = units.value;
     
     let areaPulgada = lengthPulgadas * widthPulgadas;
     let calcularAdhesive2 = calcAdhesiV(areaPulgada);
@@ -62,7 +73,7 @@ function imprimirEnPies(calcularAdhesive) {
     let enviarAImprimirEnPie =  calcularAdhesive2 / pulgadaSobrePie;
 
     var sitioParaValorEnPie = document.getElementById("areaPie");
-    sitioParaValorEnPie.innerHTML = "resultado del precio en pies(Feets): " + enviarAImprimirEnPie + "$ Dollars/Feet^2"
+    sitioParaValorEnPie.innerHTML = "resultado del precio en pies(Feets): " + enviarAImprimirEnPie + "$ Dollars/" + imprimeUnidad + "^2";
 }
 
 // calculamos el valor de y, o el area, utilizando la funcion Math.sqrt para calcular la raiz
