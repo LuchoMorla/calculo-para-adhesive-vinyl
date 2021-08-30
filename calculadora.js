@@ -7,6 +7,8 @@ let checkbox = document.getElementById('wantDiseño');
 let unidades = document.getElementById('unitIs');
 
 const form = document.getElementById('form');
+
+
 form.addEventListener('change', function() {
 
     let costoDiseño = 0;
@@ -17,9 +19,11 @@ form.addEventListener('change', function() {
     // Se agregara el valor adicional por el diseño
     sum.innerHTML = "Aditional value for the desing: " + costoDiseño + " dollars";
 
+    //imprime la unidad seleccionada
     let units = document.getElementById('unit');
     let imprimeUnidad = units.value;
     unidades.innerHTML = imprimeUnidad;
+
     console.log('algo paso en el formulario');
 });
 
@@ -79,7 +83,21 @@ function imprimirEnPies(calcularAdhesive) {
 // calculamos el valor de y, o el area, utilizando la funcion Math.sqrt para calcular la raiz
 
 function calcAdhesiV(areaPulgada){
-    let parentesis = areaPulgada * precioPulgadaAlCuadrado;
+    let units = document.getElementById('unit');
+let imprimeUnidad = units.value;
+    const precioXUnidad = () => {
+    if(imprimeUnidad === 'Inches') {
+        let precioPorAreaSeleccionada = precioPulgadaAlCuadrado;
+        return precioPorAreaSeleccionada;
+    }
+    if(imprimeUnidad === 'Feets') {
+        let precioPorAreaSeleccionada = precioPieAlCuadrado;
+        return precioPorAreaSeleccionada;
+    }
+}
+    let validarPrecioPorUnidad = precioXUnidad();
+    console.log(validarPrecioPorUnidad);
+    let parentesis = areaPulgada * validarPrecioPorUnidad;
     return parentesis
 }
 
