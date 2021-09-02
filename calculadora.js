@@ -53,7 +53,12 @@ function calculoX(){
     let calcularAdhesive = calcAdhesiV(areaPulgada);
 
     y = document.getElementById("area");
-    y.innerHTML = "The price at inches of your Adeshive Vinyl is: " + calcularAdhesive + " $ Dollars/" + imprimeUnidad + "^2";
+    y.innerHTML = "The price at inches of your Adeshive Vinyl is: " + calcularAdhesive + " $ Dollars";
+
+    let imprimirArea = document.getElementById('areaPie');
+
+    imprimirArea.innerHTML = "El area de su producto es " + areaPulgada + " " + imprimeUnidad + "^2";
+
 
 }
 
@@ -77,7 +82,7 @@ function imprimirEnPies(calcularAdhesive) {
     let enviarAImprimirEnPie =  calcularAdhesive2 / pulgadaSobrePie;
 
     var sitioParaValorEnPie = document.getElementById("areaPie");
-    sitioParaValorEnPie.innerHTML = "resultado del precio en pies(Feets): " + enviarAImprimirEnPie + "$ Dollars/" + imprimeUnidad + "^2";
+    sitioParaValorEnPie.innerHTML = "resultado del precio en pies(Feets): " + enviarAImprimirEnPie + "$ Dollars/" + imprimeUnidad + "^2 ";
 }
 
 // calculamos el valor de y, o el area, utilizando la funcion Math.sqrt para calcular la raiz
