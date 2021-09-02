@@ -58,34 +58,10 @@ function calculoX(){
     let imprimirArea = document.getElementById('areaPie');
 
     imprimirArea.innerHTML = "El area de su producto es " + areaPulgada + " " + imprimeUnidad + "^2";
-
-
-}
-
-//funcion para imprimir el valor en pies
-
-function imprimirEnPies(calcularAdhesive) {
-    let l = document.getElementById("longitud");
-    let w = document.getElementById("ancho");
-    var length = l.value;
-    var width = w.value;
-
-    var lengthPulgadas = length;
-    var widthPulgadas = width;
-
-    let units = document.getElementById('unit');
-    let imprimeUnidad = units.value;
-    
-    let areaPulgada = lengthPulgadas * widthPulgadas;
-    let calcularAdhesive2 = calcAdhesiV(areaPulgada);
-
-    let enviarAImprimirEnPie =  calcularAdhesive2 / pulgadaSobrePie;
-
-    var sitioParaValorEnPie = document.getElementById("areaPie");
-    sitioParaValorEnPie.innerHTML = "resultado del precio en pies(Feets): " + enviarAImprimirEnPie + "$ Dollars/" + imprimeUnidad + "^2 ";
 }
 
 // calculamos el valor de y, o el area, utilizando la funcion Math.sqrt para calcular la raiz
+//hare una funcion que calcule el valor total por la unidad seleccionada
 
 function calcAdhesiV(areaPulgada){
     let units = document.getElementById('unit');
@@ -105,7 +81,7 @@ let imprimeUnidad = units.value;
 
     const calculoPorUnidadSeleccionada = (validarPrecioPorUnidad) => {
         if(imprimeUnidad === 'Inches') {
-            let parentesis = (areaPulgada * validarPrecioPorUnidad) / 12;
+            let parentesis = (areaPulgada * validarPrecioPorUnidad) / pulgadaSobrePie;
             return parentesis;
         }
         if(imprimeUnidad === 'Feets') {
@@ -119,5 +95,4 @@ let imprimeUnidad = units.value;
     return resultado;
 }
 
-//hare una funcion que calcule el valor total por la unidad seleccionada
 
