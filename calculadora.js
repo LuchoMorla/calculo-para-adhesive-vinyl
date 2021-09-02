@@ -93,6 +93,7 @@ let imprimeUnidad = units.value;
     const precioXUnidad = () => {
     if(imprimeUnidad === 'Inches') {
         let precioPorAreaSeleccionada = precioPulgadaAlCuadrado;
+        // inches varia el resultado debe ser dividido para 12;
         return precioPorAreaSeleccionada;
     }
     if(imprimeUnidad === 'Feets') {
@@ -101,10 +102,22 @@ let imprimeUnidad = units.value;
     }
 }
     let validarPrecioPorUnidad = precioXUnidad();
-    console.log(validarPrecioPorUnidad);
-    let parentesis = areaPulgada * validarPrecioPorUnidad;
-    return parentesis
+
+    const calculoPorUnidadSeleccionada = (validarPrecioPorUnidad) => {
+        if(imprimeUnidad === 'Inches') {
+            let parentesis = (areaPulgada * validarPrecioPorUnidad) / 12;
+            return parentesis;
+        }
+        if(imprimeUnidad === 'Feets') {
+            let parentesis = areaPulgada * validarPrecioPorUnidad;
+            return parentesis;
+        }
+    }
+    
+    console.log("precio por unidad es " + validarPrecioPorUnidad);
+    var resultado = calculoPorUnidadSeleccionada(validarPrecioPorUnidad);
+    return resultado;
 }
 
-//hare una funcion que sume el total de los valores
+//hare una funcion que calcule el valor total por la unidad seleccionada
 
