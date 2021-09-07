@@ -4,6 +4,14 @@ html {
     text-align: center;
     font-size: 62.5%;
 }
+.container-plugin {
+    width: 60%;
+    border:  1px solid orange;
+    margin: 0 auto;
+    border-radius: 25px;
+    padding: 10px;
+    padding-right: 15px;
+}
 body {
     font-size: 1.6rem;
 }
@@ -28,6 +36,7 @@ button {
     font-size: 1.6rem;
     border: 1px solid orange;
     border-radius: 3px;
+    margin: 5px;
 }
 /*´ponerle estilos a las respuestas de los hovers*/
 
@@ -39,4 +48,17 @@ button {
 #longitud:hover {
     background: cornflowerblue;
 }
+
+.conatiner-units {
+    border: 1px solid orange;
+    width: 100%;
+    align-content: center;
+    border-radius: 12px;
+    margin: 1px;
+}
+.conatiner-units p {
+    padding-left: 1px;
+    padding-right: 1px;
+    margin: 5px;
+ }
  

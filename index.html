@@ -8,16 +8,19 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div class="container-plugin">
 <br>
     <form for="" id="form" >
+        <h2>calculate the price of the your adhesive vinyl</h2>
         <label for="wantDiseño">
-            ¿ Do you like to include the desing of your product? click on the checkbox:
-        </label>
-    </Br>
+       * first of all, ¿ Do you like to include the desing of your product? 
+        </Br>
+        <p></p> Click on the checkbox:
+        </label for="inputAdhesiV">
         <input type="checkbox" id="wantDiseño" value="checkbox1"/>
         <p id="suma"></p>
-        <label for="inputAdhesiV">
-            Chose the unit and then write the width and the length:
+        <label for="unit">
+        *    Chose the unit and then write the width and the length:
         </label>
         <input type="text" id="unit" list="units" />
         <datalist id="units">
@@ -25,22 +28,26 @@
             <option value="Feets">Feets</option>o
         </datalist>
         <p> the minimun buy is 1X1 feets or 12X12 inches </p>
+        <div class="conatiner-units">
+        <p id="unitIs">
+        </p>
         <label for="ancho">
-            <p> Width: 
+            <p>* Width: 
              <input type="number" id="ancho">
              the maximun width available in a product is 120 inches or 10 feets 
-             <p id="unitIs">
-             </p></p>
+            </p>
          </label>
         <label for="longitud">
-           <p> Height: 
+           <p>* Height: 
             <input type="number" id="longitud"> the maximun heigth available in a product is 48 inches or 4 feets
          </p>
+        </div>
         </label>
                 <button type="button" onclick="calculoX()" class="button">Calculate</button>
         <p  id="area"></p>
         <p id="areaPie"></p>
     </form>
     <script src="./calculadora.js"></script>
+</div>
 </body>
 </html>
