@@ -15,22 +15,25 @@
         <input type="checkbox" id="wantDiseño" value="checkbox1"/>
         <p id="suma"></p>
         <label for="inputAdhesiV">
-            Chose the unit to write the width and the length:
-        </label></Br>
+            Chose the unit and then write the width and the length:
+        </label>
         <input type="text" id="unit" list="units" />
         <datalist id="units">
             <option value="Inches">Inches</option>
             <option value="Feets">Feets</option>o
         </datalist>
+        <p>the maximun to ship up a Vinyl is 48 inches(4 feets) of heigth and 120 inches(10 feets) of width. </p><p> the minimun buy is 1X1 feets or 12X12 inches </p>
         <label for="ancho">
             <p> Width: 
-             <input type="number" id="ancho"> <p id="unitIs"></p></p>
+             <input type="number" id="ancho"> <p id="unitIs">
+             </p></p>
          </label>
         <label for="longitud">
            <p> Height: 
-            <input type="number" id="longitud"></p>
+            <input type="number" id="longitud">
+         </p>
         </label>
-                <button type="button" onclick="calculoX()">Calculate(En unidad selecciona)</button>
+                <button type="button" onclick="calculoX()">Calculate</button>
         <p  id="area"></p>
         <p id="areaPie"></p>
     </form>

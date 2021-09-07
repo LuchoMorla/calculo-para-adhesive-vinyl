@@ -25,6 +25,7 @@ form.addEventListener('change', function() {
     unidades.innerHTML = imprimeUnidad;
 
     console.log('algo paso en el formulario');
+
 });
 
 // Interaccion con html dentro de la funcion que va a sacar el resultado del calculo, se cambiara la ecuacion por una que calcule el precio del area cuadrada más el shipping
@@ -96,3 +97,4 @@ let imprimeUnidad = units.value;
 }
 
 
+// voy a añadir respuesta al añadir una width y un heigth y limite segun unidad seleccionada
