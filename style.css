@@ -1,0 +1,42 @@
+* {
+}
+html {
+    text-align: center;
+    font-size: 62.5%;
+}
+body {
+    font-size: 1.6rem;
+}
+/*estilos de inputs*/
+#unit {
+    width: 60px;
+    border: 2px solid black;
+    border-radius: 3px;
+}
+#ancho{
+    width: 40px;
+    border: 2px solid black;
+    border-radius: 3px;
+}
+#longitud {
+    width: 40px;
+    border: 2px solid black;
+    border-radius: 3px;
+
+}
+button {
+    font-size: 1.6rem;
+    border: 1px solid orange;
+    border-radius: 3px;
+}
+/*´ponerle estilos a las respuestas de los hovers*/
+
+/*APAREZCAN mensajes al hacer hover en*/
+
+#ancho:hover {
+    background: cornflowerblue;
+}
+#longitud:hover {
+    background: cornflowerblue;
+}
+ 

@@ -98,3 +98,6 @@ let imprimeUnidad = units.value;
 
 
 // voy a añadir respuesta al añadir una width y un heigth y limite segun unidad seleccionada
+
+
+// crear una promesa que cuanto este este listo la respuesta crear una segunda respuesta más abajo
