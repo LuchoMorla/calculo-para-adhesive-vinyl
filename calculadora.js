@@ -22,7 +22,7 @@ form.addEventListener('change', function() {
     //imprime la unidad seleccionada
     let units = document.getElementById('unit');
     let imprimeUnidad = units.value;
-    unidades.innerHTML = imprimeUnidad;
+    unidades.innerHTML = "the unit of your product is " + imprimeUnidad;
 
     console.log('algo paso en el formulario');
 
