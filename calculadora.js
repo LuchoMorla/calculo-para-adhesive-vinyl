@@ -58,7 +58,7 @@ function calculoX(){
 
     let imprimirArea = document.getElementById('areaPie');
 
-    imprimirArea.innerHTML = "El area de su producto es " + areaPulgada + " " + imprimeUnidad + "^2";
+    imprimirArea.innerHTML = "The area of your product is " + areaPulgada + " " + imprimeUnidad + "^2";
 }
 
 // calculamos el valor de y, o el area, utilizando la funcion Math.sqrt para calcular la raiz
