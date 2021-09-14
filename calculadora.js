@@ -82,13 +82,26 @@ let imprimeUnidad = units.value;
     let validarPrecioPorUnidad = precioXUnidad();
 
     const calculoPorUnidadSeleccionada = (validarPrecioPorUnidad) => {
+        let l = document.getElementById("longitud");
+        let w = document.getElementById("ancho");
+        var length = l.value;
+        var width = w.value;
+    
         if(imprimeUnidad === 'Inches') {
+            if(length <= 48 && width <= 120){
             let parentesis = (areaPulgada * validarPrecioPorUnidad) / pulgadaSobrePie;
             return parentesis;
+            }else{
+                alert('the maximun available to ship a product is 120 inches of width and 48 Inches of heigth');
+            }
         }
         if(imprimeUnidad === 'Feets') {
+            if(length <= 4 && width <= 10){
             let parentesis = areaPulgada * validarPrecioPorUnidad;
             return parentesis;
+            }else{
+                alert('the maximun available to ship a product is 10 Feets of width and 4 feets of heigth');
+            }
         }
     }
     
