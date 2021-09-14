@@ -21,7 +21,7 @@ form.addEventListener('change', function() {
 
     //imprime la unidad seleccionada
     let units = document.getElementById('unit');
-    let imprimeUnidad = units.value;
+    let imprimeUnidad = units.value || "Undefined, please chose a unit or write the unit just like Feets or Inches";
     unidades.innerHTML = "the unit in which you will measure your product is " + imprimeUnidad;
 
     console.log('algo paso en el formulario');
@@ -51,6 +51,7 @@ function calculoX(){
     var widthPulgadas = width;
 
     let areaPulgada = lengthPulgadas * widthPulgadas;
+
     let calcularAdhesive = calcAdhesiV(areaPulgada);
 
     y = document.getElementById("area");
