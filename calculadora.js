@@ -17,12 +17,12 @@ form.addEventListener('change', function() {
         costoDiseño = 35;
     }
     // Se agregara el valor adicional por el diseño
-    sum.innerHTML = "Aditional value for the desing: " + costoDiseño + " dollars";
+    sum.innerHTML = "Aditional value for the artwork: $" + costoDiseño + " dollars";
 
     //imprime la unidad seleccionada
     let units = document.getElementById('unit');
     let imprimeUnidad = units.value;
-    unidades.innerHTML = "the unit of your product is " + imprimeUnidad;
+    unidades.innerHTML = "the unit in which you will measure your product is " + imprimeUnidad;
 
     console.log('algo paso en el formulario');
 
@@ -54,7 +54,7 @@ function calculoX(){
     let calcularAdhesive = calcAdhesiV(areaPulgada);
 
     y = document.getElementById("area");
-    y.innerHTML = "The price at inches of your Adeshive Vinyl is: " + calcularAdhesive + " $ Dollars";
+    y.innerHTML = "The price at inches of your Adeshive Vinyl is: $" + calcularAdhesive + " Dollars";
 
     let imprimirArea = document.getElementById('areaPie');
 

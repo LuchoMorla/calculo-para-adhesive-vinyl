@@ -15,19 +15,22 @@ html {
 body {
     font-size: 1.6rem;
 }
-/*estilos de inputs*/
+/*estilos de inputs y respuestas*/
 #unit {
-    width: 60px;
+    width: 100px;
     border: 2px solid black;
     border-radius: 3px;
 }
+#unitIs {
+    color: red;
+}
 #ancho{
-    width: 40px;
+    width: 50px;
     border: 2px solid black;
     border-radius: 3px;
 }
 #longitud {
-    width: 40px;
+    width: 50px;
     border: 2px solid black;
     border-radius: 3px;
 

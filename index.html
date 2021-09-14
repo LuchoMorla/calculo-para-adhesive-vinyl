@@ -12,37 +12,35 @@
 <br>
     <form for="" id="form" >
         <h2>Calculate the price to make your adhesive vinyl</h2>
-        <label for="wantDiseño">
-       * first of all, if you don't have a desing ¿Do you like to include the desing to your product? 
-        </Br>
-        <p></p> Click on the checkbox:
-        </label for="inputAdhesiV">
-        <input type="checkbox" id="wantDiseño" value="checkbox1"/>
-        <p id="suma"></p>
+        <p> the minimun buy is 1X1 feets or 12X12 inches </p>
         <label for="unit">
-        *    Chose the unit and then write the width and the length:
+        * Chose the unit:
         </label>
-        <input type="text" id="unit" list="units" />
+        <input type="text" id="unit" list="units" placeholder="Inches/Feets"/>
         <datalist id="units">
             <option value="Inches">Inches</option>
             <option value="Feets">Feets</option>o
         </datalist>
-        <p> the minimun buy is 1X1 feets or 12X12 inches </p>
         <div class="conatiner-units">
         <p id="unitIs">
         </p>
         <label for="ancho">
-            <p>* Width: 
-             <input type="number" id="ancho">
+            <p>* 
+             <input type="number" id="ancho" placeholder="Width">
             the maximun width available to ship a product is 120 inches or 10 feets 
             </p>
          </label>
         <label for="longitud">
-           <p>* Height: 
-            <input type="number" id="longitud"> the maximun heigth available to ship a product is 48 inches or 4 feets
+           <p>* 
+            <input type="number" id="longitud" placeholder="Height"> the maximun heigth available to ship a product is 48 inches or 4 feets
          </p>
         </div>
         </label>
+        <label for="wantDiseño">
+            if you need an artwork click on the checkbox:
+             <input type="checkbox" id="wantDiseño" value="checkbox1"/>
+             <p id="suma"></p>
+            </label for="inputAdhesiV">
                 <button type="button" onclick="calculoX()" class="button">Calculate</button>
         <p  id="area"></p>
         <p id="areaPie"></p>
