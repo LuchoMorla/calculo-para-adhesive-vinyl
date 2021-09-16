@@ -90,7 +90,7 @@ let imprimeUnidad = units.value;
         if(imprimeUnidad === 'Inches') {
             if(length <= 48 && width <= 120){
             let parentesis = (areaPulgada * validarPrecioPorUnidad) / pulgadaSobrePie;
-            return parentesis;
+            return parentesis.toFixed(2);
             }else{
                 alert('the maximun available to ship a product is 120 inches of width and 48 Inches of heigth');
             }
@@ -98,7 +98,7 @@ let imprimeUnidad = units.value;
         if(imprimeUnidad === 'Feets') {
             if(length <= 4 && width <= 10){
             let parentesis = areaPulgada * validarPrecioPorUnidad;
-            return parentesis;
+            return parentesis.toFixed(2);
             }else{
                 alert('the maximun available to ship a product is 10 Feets of width and 4 feets of heigth');
             }
